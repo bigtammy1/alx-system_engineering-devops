@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 # This script will stop a process by sending a signal to its PID
 
+read pid
 kill "$pid"
