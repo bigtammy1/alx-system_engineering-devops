@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script will stop a process by sending a signal to its PID
+# Terminates the process created by the '4-to_infinity_and_beyond' script
 
-read pid
-kill "$pid"
+process="./4-to_infinity_and_beyond"
+pgrep -f $process | xargs kill -15
