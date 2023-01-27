@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-# This script will display lines containing the word "bash" and show the PID of the Bash process
-
+# This script will display lines containing the bash word
 # shellcheck disable=SC2009
-ps -ejH | grep -w --color=auto bash | awk '{print $2}'
-
+ps -ejH | grep bash
