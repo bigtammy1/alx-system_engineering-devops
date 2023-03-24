@@ -15,4 +15,4 @@ This project contains puppet scripts that does the following:
 | ----- | ----- | ---------- |
 
 <center> <h3>Project Author</h3> </center>
-[Tammy](https://github.com/bigtammy1)
+[Tammy Erekosima] (https://github.com/bigtammy1)
