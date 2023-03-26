@@ -1,6 +1,6 @@
-<center> <h1>SSH Project</h1> </h1>
+<center> <h1>SSH Project</h1> </center>
 
-This project is about connecting to an Ubuntu server in a datacenter somewhere via SSH, but instead of using a password, we will use a public key.
+This project is about connecting to an Ubuntu server in a datacenter somewhere via SSH, but instead of using a password, we will use a private key.
 
 | Tasks | Description |
 | ----- | ----------- |
