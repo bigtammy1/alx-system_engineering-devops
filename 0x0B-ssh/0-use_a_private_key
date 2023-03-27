@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
-# This script uses ssh to connect to the server with the private key ~/.ssh/school and the user ubuntu.
+# this script connects to the server provided by alx
 
 ssh -i ~/.ssh/school ubuntu@54.152.129.88
