@@ -49,5 +49,5 @@ backend letsencrypt-backend
 
 backend web_back
         balance roundrobin
-        server 36755-web-01 54.173.191.2:80 check
-        server 36755-web-02 52.86.38.179:80 check
+        server 36755-web-01 54.152.129.88:80 check
+        server 36755-web-02 54.152.129.88:80 check
