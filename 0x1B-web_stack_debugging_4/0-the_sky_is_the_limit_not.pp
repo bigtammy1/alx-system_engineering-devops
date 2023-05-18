@@ -1,21 +1,13 @@
-# Solution To Webstack Debugging #4 project
+# Increases the amount of traffic an Nginx server can handle.
 
-exec{'Fix file read limit on System level':
-  provider => shell,
-  command  => "sed -i 's/ULIMIT=\"-n 15\"/ULIMIT=\"-n 65535\"/g' /etc/default/nginx"
-}
+# Increase the ULIMIT of the default file
+exec { 'fix--for-nginx':
+  command => 'sed -i "s/15/4096/" /etc/default/nginx',
+  path    => '/usr/local/bin/:/bin/'
+} ->
 
-exec{'Increase file read limit on Nginx level':
-  provider => shell,
-  command  => "sed -i '3 a worker_rlimit_nofile 30000;' /etc/nginx/nginx.conf"
-}
-
-exec{'Increase active work-connections':
-  provider => shell,
-  command  => 'sed -i "s/\tworker_connections 768;/\tworker_connections 65535;/g" /etc/nginx/nginx.conf'
-}
-
-exec{'Restart Nginx server':
-  provider => shell,
-  command  => 'service nginx restart'
+# Restart Nginx
+exec { 'nginx-restart':
+  command => 'nginx restart',
+  path    => '/etc/init.d/'
 }
